@@ -1,5 +1,5 @@
 #Data Mining Project 2021
-
+#
 Given healthcare-dataset-stroke-data.csv 
 1. Analysis of dataset and graphical representation
 2. Manage missing values
