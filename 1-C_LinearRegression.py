@@ -23,9 +23,7 @@ schema = StructType(
     ]
 )
 healthcare_df = (
-    spark.read.option("delimiter", ",").csv(
-        "healthcare-dataset-stroke-data.csv", header=True, schema=schema
-    )
+    spark.read.option("delimiter", ",").csv("healthcare-dataset-stroke-data.csv", header=True, schema=schema)
     # .filter(F.col("gender") != "Other")
 )
 
@@ -80,4 +78,3 @@ test_df = (
 healthcare_df = test_df.union(train_df.drop("features"))
 healthcare_df = healthcare_df.drop("smoking_status")
 healthcare_df.show()
-
